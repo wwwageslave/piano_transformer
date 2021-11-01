@@ -13,6 +13,8 @@ import tensorflow.compat.v1 as tf   # pylint: disable=import-error
 from tensor2tensor.utils import decoding
 from tensor2tensor.utils import trainer_lib
 
+tf.disable_v2_behavior()
+
 import utils
 
 flags = tf.flags
