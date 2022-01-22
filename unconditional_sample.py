@@ -114,8 +114,8 @@ def generate(estimator, unconditional_encoders, decode_length, targets, primer_n
         unconditional_ns = utils.mm.midi_file_to_note_sequence(midi_filename)
 
         # Append continuation to primer if any.
-        continuation_ns = utils.mm.concatenate_sequences([primer_ns, unconditional_ns])
-        utils.mm.sequence_proto_to_midi_file(continuation_ns, base_name.replace('*', '%03d' % i))
+#       continuation_ns = utils.mm.concatenate_sequences([primer_ns, unconditional_ns])
+        utils.mm.sequence_proto_to_midi_file(unconditional_ns, base_name.replace('*', '%03d' % i))
 
 
 def run():
